@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  background-color: #070a10;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Estilos de Etiquetas y Pines de Google Maps */
+.ts-overlay {
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.ts-zone-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.ts-zone-label:hover, .ts-zone-label.is-selected {
+  transform: scale(1.08);
+  border-color: #38bdf8;
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
+}
+
+.ts-zone-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.ts-zone-code {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.ts-user-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #2563eb;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 14px #2563eb;
+  animation: pulse 2s infinite;
+}
+
+.ts-history-pin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #7f1d1d;
+  color: #fef2f2;
+  border: 1px solid #ef4444;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Colores institucionales GOV / SIRMED */
+.bg-gov { background-color: #1d2a4d; }
+.border-gov { border-color: #1d2a4d; }
+.text-gov { color: #1d2a4d; }
+.bg-navy { background-color: #0f172a; }
+.text-navy { color: #0f172a; }
+.bg-sun { background-color: #f59e0b; }
+.text-sun { color: #f59e0b; }
+.text-sun-600 { color: #d97706; }
+
+/* Leaflet Pills de Comunas */
+.custom-leaflet-div {
+  background: transparent;
+  border: none;
+}
+
+.map-zone-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1.5px solid #38bdf8;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.map-zone-pill:hover, .map-zone-pill.active {
+  transform: scale(1.12);
+  border-color: #ffffff;
+  background: #0f172a;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+}
+
+.map-zone-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+}
+
+.map-zone-pill .rain {
+  color: #38bdf8;
+  font-size: 10px;
+  font-family: monospace;
+}
+
+@keyframes earthquake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-2px, 0px) rotate(-0.5deg); }
+  40% { transform: translate(1px, -1px) rotate(0.5deg); }
+  60% { transform: translate(-1px, 2px) rotate(0deg); }
+  80% { transform: translate(2px, 1px) rotate(-0.5deg); }
+  100% { transform: translate(1px, -2px) rotate(0.5deg); }
+}
+
+
